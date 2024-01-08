@@ -1,0 +1,22 @@
+MariaDB [mahasiswa]> create table mahasiswa(
+    -> id int primary key auto_increment,
+    -> nim varchar(10) unique,
+    -> nama varchar(100),
+    -> jk char(1),
+    -> prodi varchar(10) not null);
+Query OK, 0 rows affected (1.556 sec)
+
+MariaDB [mahasiswa]> insert into mahasiswa(nim,nama,jk,prodi)values('220511186','ifhalsbobi','l','teknikinformatika');
+Query OK, 1 row affected, 1 warning (0.202 sec)
+
+MariaDB [mahasiswa]> insert into mahasiswa(nim,nama,jk,prodi)values('220511187','wati','p','teknikinformatika');
+Query OK, 1 row affected, 1 warning (0.009 sec)
+
+MariaDB [mahasiswa]> select * from mahasiswa;
++----+-----------+------------+------+------------+
+| id | nim       | nama       | jk   | prodi      |
++----+-----------+------------+------+------------+
+|  1 | 220511186 | ifhalsbobi | l    | teknikinfo |
+|  2 | 220511187 | wati       | p    | teknikinfo |
++----+-----------+------------+------+------------+
+2 rows in set (0.018 sec)
